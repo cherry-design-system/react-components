@@ -8,9 +8,4 @@ const H4 = makeHeading(4);
 const H5 = makeHeading(5);
 const H6 = makeHeading(6);
 
-export const H = ({ type = 1, ...props }) => {
-	const Component = makeHeading(type);
-	return <Component {...props} />;
-};
-
 export { H1, H2, H3, H4, H5, H6 };

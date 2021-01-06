@@ -1,8 +1,59 @@
 import * as React from "react";
 
-type Omit<T, K> = Pick<T, Exclude<keyof T, K>>;
+declare class H1 extends React.Component<
+	HeadingProps,
+	any
+> {}
 
-export interface ContainerProps extends React.HTMLAttributes<HTMLElement> {
+declare class H2 extends React.Component<
+	HeadingProps,
+	any
+> {}
+
+declare class H3 extends React.Component<
+	HeadingProps,
+	any
+> {}
+
+declare class H4 extends React.Component<
+	HeadingProps,
+	any
+> {}
+
+declare class H5 extends React.Component<
+	HeadingProps,
+	any
+> {}
+
+declare class H6 extends React.Component<
+	HeadingProps,
+	any
+> {}
+
+declare class Container extends React.Component<
+	ContainerProps,
+	any
+> {}
+
+declare class Row extends React.Component<
+	RowProps,
+	any
+> {}
+
+declare class Col extends React.Component<
+	ColProps,
+	any
+> {}
+
+interface HeadingProps {
+	children?: React.ReactNode;
+	id?: string;
+	className?: string;
+	size?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "hero1" | "hero2" | "hero3";
+	theme?: object;
+}
+
+interface ContainerProps {
 	id?: string;
 	className?: string;
 	children?: React.ReactNode;
@@ -11,7 +62,7 @@ export interface ContainerProps extends React.HTMLAttributes<HTMLElement> {
 	theme?: object;
 }
 
-export interface RowProps extends Omit<React.HTMLProps<HTMLElement>, "form"> {
+interface RowProps {
 	id?: string;
 	className?: string;
 	children?: React.ReactNode;
@@ -39,7 +90,7 @@ export interface RowProps extends Omit<React.HTMLProps<HTMLElement>, "form"> {
 	theme?: object;
 }
 
-export interface ColProps extends Omit<React.HTMLProps<HTMLElement>, "form"> {
+interface ColProps {
 	id?: string;
 	className?: string;
 	children?: React.ReactNode;
@@ -78,16 +129,4 @@ export interface ColProps extends Omit<React.HTMLProps<HTMLElement>, "form"> {
 	theme?: object;
 }
 
-declare class Container<
-	T = ContainerProps
-> extends React.Component<ContainerProps> {}
-
-declare class Row<
-	T = { [key: string]: any }
-> extends React.Component<RowProps> {}
-
-declare class Col<
-	T = { [key: string]: any }
-> extends React.Component<ColProps> {}
-
-export { Container, Col, Row };
+export { H1, H2, H3, H4, H5, H6, Container, Row, Col };
