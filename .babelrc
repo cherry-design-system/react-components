@@ -3,6 +3,14 @@
 	"plugins": [
 		"@babel/plugin-proposal-class-properties",
 		"@babel/plugin-proposal-object-rest-spread",
-		"@emotion/babel-plugin"
+		[
+			"@emotion/babel-plugin",
+			{
+				"sourceMap": false,
+				"autoLabel": "never",
+				"labelFormat": "[cherry]",
+				"cssPropOptimization": true
+			}
+		]
 	]
 }
