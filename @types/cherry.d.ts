@@ -44,7 +44,9 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	theme?: object;
 }
 
-interface FontStyleProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface FontStyleProps {
+	id?: string;
+	className?: string;
 	children?: React.ReactNode;
 	variant?:
 		| "eyebrow"
@@ -54,8 +56,6 @@ interface FontStyleProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 		| "lead"
 		| "input"
 		| "inputBig";
-	frame?: boolean;
-	size?: "default" | "big";
 	theme?: object;
 }
 
