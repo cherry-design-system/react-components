@@ -1,30 +1,10 @@
 import React from "react";
 import { spaceStyles } from "./Space.styles";
 
-function Space({
-	size,
-	xsSize,
-	smSize,
-	mdSize,
-	lgSize,
-	xlSize,
-	xxlSize,
-	xxxlSize,
-	horizontal,
-}) {
+function Space({ size, xs, sm, md, lg, xl, xxl, xxxl, horizontal }) {
 	return (
 		<div
-			css={spaceStyles(
-				size,
-				xsSize,
-				smSize,
-				mdSize,
-				lgSize,
-				xlSize,
-				xxlSize,
-				xxxlSize,
-				horizontal,
-			)}
+			css={spaceStyles(size, xs, sm, md, lg, xl, xxl, xxxl, horizontal)}
 		/>
 	);
 }

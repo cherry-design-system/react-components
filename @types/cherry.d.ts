@@ -191,13 +191,13 @@ interface MinHeightProps {
 
 interface SpaceProps {
 	size?: number;
-	xsSize?: number;
-	smSize?: number;
-	mdSize?: number;
-	lgSize?: number;
-	xlSize?: number;
-	xxlSize?: number;
-	xxxlSize?: number;
+	xs?: number;
+	sm?: number;
+	md?: number;
+	lg?: number;
+	xl?: number;
+	xxl?: number;
+	xxxl?: number;
 	horizontal?: number;
 }
 

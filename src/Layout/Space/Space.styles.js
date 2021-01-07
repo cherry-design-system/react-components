@@ -13,17 +13,7 @@ const localStyle = (size, horizontal) =>
 				height: ${size}px;
 		  `;
 
-const spaceStyles = (
-	size,
-	xsSize,
-	smSize,
-	mdSize,
-	lgSize,
-	xlSize,
-	xxlSize,
-	xxxlSize,
-	horizontal,
-) => css`
+const spaceStyles = (size, xs, sm, md, lg, xl, xxl, xxxl, horizontal) => css`
 	${size &&
 	css`
 		${horizontal ? localStyle(size, true) : localStyle(size, false)}
@@ -34,102 +24,98 @@ const spaceStyles = (
 		display: none;
 	`}
 
-	${xsSize &&
+	${xs &&
 	css`
 		${mq(Breakpoints.xs)} {
-			${horizontal ? localStyle(xsSize, true) : localStyle(xsSize, false)}
+			${horizontal ? localStyle(xs, true) : localStyle(xs, false)}
 		}
 	`}
 
-	${xsSize === "none" &&
+	${xs === "none" &&
 	css`
 		${mq(Breakpoints.xs)} {
 			display: none;
 		}
 	`}
 
-	${smSize &&
+	${sm &&
 	css`
 		${mq(Breakpoints.sm)} {
-			${horizontal ? localStyle(smSize, true) : localStyle(smSize, false)}
+			${horizontal ? localStyle(sm, true) : localStyle(sm, false)}
 		}
 	`}
 
-	${smSize === "none" &&
+	${sm === "none" &&
 	css`
 		${mq(Breakpoints.sm)} {
 			display: none;
 		}
 	`}
 
-	${mdSize &&
+	${md &&
 	css`
 		${mq(Breakpoints.md)} {
-			${horizontal ? localStyle(mdSize, true) : localStyle(mdSize, false)}
+			${horizontal ? localStyle(md, true) : localStyle(md, false)}
 		}
 	`}
 
-	${mdSize === "none" &&
+	${md === "none" &&
 	css`
 		${mq(Breakpoints.md)} {
 			display: none;
 		}
 	`}
 
-	${lgSize &&
+	${lg &&
 	css`
 		${mq(Breakpoints.lg)} {
-			${horizontal ? localStyle(lgSize, true) : localStyle(lgSize, false)}
+			${horizontal ? localStyle(lg, true) : localStyle(lg, false)}
 		}
 	`}
 
-	${lgSize === "none" &&
+	${lg === "none" &&
 	css`
 		${mq(Breakpoints.lg)} {
 			display: none;
 		}
 	`}
 
-	${xlSize &&
+	${xl &&
 	css`
 		${mq(Breakpoints.xl)} {
-			${horizontal ? localStyle(xlSize, true) : localStyle(xlSize, false)}
+			${horizontal ? localStyle(xl, true) : localStyle(xl, false)}
 		}
 	`}
 
-	${xlSize === "none" &&
+	${xl === "none" &&
 	css`
 		${mq(Breakpoints.xl)} {
 			display: none;
 		}
 	`}
 
-	${xxlSize &&
+	${xxl &&
 	css`
 		${mq(Breakpoints.xxl)} {
-			${horizontal
-				? localStyle(xxlSize, true)
-				: localStyle(xxlSize, false)}
+			${horizontal ? localStyle(xxl, true) : localStyle(xxl, false)}
 		}
 	`}
 
-	${xxlSize === "none" &&
+	${xxl === "none" &&
 	css`
 		${mq(Breakpoints.xxl)} {
 			display: none;
 		}
 	`}
 
-	${xxxlSize &&
+	${xxxl &&
 	css`
 		${mq(Breakpoints.xxxl)} {
-			${horizontal
-				? localStyle(xxxlSize, true)
-				: localStyle(xxxlSize, false)}
+			${horizontal ? localStyle(xxxl, true) : localStyle(xxxl, false)}
 		}
 	`}
 
-	${xxxlSize === "none" &&
+	${xxxl === "none" &&
 	css`
 		${mq(Breakpoints.xxxl)} {
 			display: none;
