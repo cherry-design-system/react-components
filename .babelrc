@@ -8,7 +8,7 @@
 			{
 				"sourceMap": false,
 				"autoLabel": "never",
-				"labelFormat": "[cherry]",
+				"labelFormat": "[dirname]",
 				"cssPropOptimization": true
 			}
 		]
