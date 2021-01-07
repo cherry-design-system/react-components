@@ -195,19 +195,19 @@ const globalStyles = (
 				}
 
 				& th {
-					font-size: ${theme.sizes.button.mobile};
+					font-size: ${theme.sizes.button.size.mobile};
 
 					${mq(Breakpoints.lg)} {
-						font-size: ${theme.sizes.button.desktop};
+						font-size: ${theme.sizes.button.size.desktop};
 					}
 				}
 
 				& td {
-					font-size: ${theme.sizes.text.mobile};
+					font-size: ${theme.sizes.text.size.mobile};
 					color: ${theme.colors.gray};
 
 					${mq(Breakpoints.lg)} {
-						font-size: ${theme.sizes.text.desktop};
+						font-size: ${theme.sizes.text.size.desktop};
 					}
 
 					&:first-of-type {

@@ -11,7 +11,12 @@ function FontStyle({
 	...props
 }) {
 	return (
-		<span id={id} className={className} css={fontStyles(theme, variant)} {...props}>
+		<span
+			id={id}
+			className={className}
+			css={fontStyles(theme, variant)}
+			{...props}
+		>
 			{children}
 		</span>
 	);
