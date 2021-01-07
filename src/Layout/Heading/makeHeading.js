@@ -1,9 +1,9 @@
 import React from "react";
 import { makeHeadingStyles } from "./makeHeading.styles";
-import {localTheme} from "../../theme";
+import { localTheme } from "../../theme";
 
 function makeHeading(h) {
-	return ({ children, size, className, id, theme = localTheme}) => {
+	return ({ children, size, className, id, theme = localTheme }) => {
 		if (h === 1) {
 			return (
 				<h1

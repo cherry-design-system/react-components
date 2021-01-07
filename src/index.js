@@ -1,1 +1,21 @@
-export { Container, Row, Col, H1, H2, H3, H4, H5, H6 } from "./Layout";
+export {
+	Button,
+	Container,
+	FontStyle,
+	Row,
+	Col,
+	H1,
+	H2,
+	H3,
+	H4,
+	H5,
+	H6,
+	Input,
+	Select,
+	Textarea,
+	Label,
+	MinHeight,
+	Space,
+	TableOverflow,
+} from "./Layout";
+export { globalStyles } from "./globalStyles";
