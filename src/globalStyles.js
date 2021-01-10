@@ -136,7 +136,6 @@ const globalStyles = (
 			}
 
 			p {
-				color: ${theme.colors.gray};
 				margin: 10px 0;
 
 				& a {
@@ -148,6 +147,13 @@ const globalStyles = (
 						}
 					}
 				}
+			}
+
+			blockquote,
+			p,
+			ol,
+			ul {
+				color: ${theme.colors.gray};
 			}
 
 			figure {
