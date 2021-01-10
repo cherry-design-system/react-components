@@ -2,7 +2,7 @@ const localTheme = {
 	spacing: {
 		maxWidth: "1280px",
 		maxWidthLimit: "1440px",
-		paddingTopBody: { mobile: "76px", desktop: "76px" },
+		paddingTopBody: { mobile: "0", desktop: "0" },
 		marginContainer: { mobile: "20px", desktop: "20px" },
 		marginRow: { default: "-10px", medium: "-30px", big: "-50px" },
 		gutterCol: { default: "10px", medium: "30px", big: "50px" },
