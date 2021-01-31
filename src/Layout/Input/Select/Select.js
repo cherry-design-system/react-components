@@ -16,7 +16,11 @@ function Select({
 }) {
 	return (
 		<>
-			{label && <Label htmlFor={props.id}>{label}</Label>}
+			{label && (
+				<Label htmlFor={props.id} error={error} success={success}>
+					{label}
+				</Label>
+			)}
 			<div css={selectWrapperStyles(theme, size, success, error)}>
 				<select
 					className={className}

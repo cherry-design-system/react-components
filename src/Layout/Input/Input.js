@@ -32,14 +32,22 @@ function Input({
 					{...props}
 				/>
 				{type === "checkbox" ? <Check /> : <em />}
-				{label && <Label htmlFor={props.id}>{label}</Label>}
+				{label && (
+					<Label htmlFor={props.id} error={error} success={success}>
+						{label}
+					</Label>
+				)}
 			</div>
 		);
 	}
 
 	return (
 		<>
-			{label && <Label htmlFor={props.id}>{label}</Label>}
+			{label && (
+				<Label htmlFor={props.id} error={error} success={success}>
+					{label}
+				</Label>
+			)}
 			<input
 				type={type}
 				className={className}

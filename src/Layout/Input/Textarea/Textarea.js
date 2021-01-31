@@ -14,7 +14,11 @@ function Textarea({
 }) {
 	return (
 		<>
-			{label && <Label htmlFor={props.id}>{label}</Label>}
+			{label && (
+				<Label htmlFor={props.id} error={error} success={success}>
+					{label}
+				</Label>
+			)}
 			<textarea
 				className={className}
 				css={inputStyles(

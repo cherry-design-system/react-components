@@ -4,15 +4,26 @@ import {
 	buttonFontStyles,
 	resetButtonStyles,
 } from "../../helperStyles";
-import { Breakpoints, mq } from "../../mq";
 
-export const buttonStyles = (theme, variant, size, frame, disabled) => css`
+export const buttonStyles = (
+	theme,
+	variant,
+	size,
+	frame,
+	disabled,
+	fullWidth,
+) => css`
 	${resetButtonStyles};
 	display: inline-block;
 	vertical-align: middle;
 	font-weight: 600;
 	padding: 15px 25px;
 	border-radius: 100px;
+
+	${fullWidth &&
+	css`
+		width: 100%;
+	`}
 
 	${size === "default"
 		? css`

@@ -41,6 +41,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	variant?: "primary" | "secondary" | "tertiary";
 	frame?: boolean;
 	size?: "default" | "big";
+	fullWidth?: boolean;
 	theme?: object;
 }
 
