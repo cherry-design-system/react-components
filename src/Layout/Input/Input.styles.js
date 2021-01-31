@@ -175,6 +175,7 @@ export const selectWrapperStyles = (theme, size, success, error) => css`
 	& select {
 		width: 100%;
 		min-height: ${size === "big" ? "55px" : "51px"};
+		padding-right: 40px;
 
 		&:disabled ~ svg {
 			& polyline,
