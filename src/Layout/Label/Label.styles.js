@@ -7,10 +7,6 @@ export const labelStyles = (theme, error, success) => css`
 	padding: 0;
 	margin: 0;
 
-	&[for] {
-		padding: 0 0 0 7px;
-	}
-
 	${error &&
 	css`
 		color: ${theme.colors.error};

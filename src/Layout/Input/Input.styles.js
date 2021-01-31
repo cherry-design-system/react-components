@@ -67,6 +67,7 @@ export const inputStyles = (theme, type, size, disabled, success, error) => css`
 	${(type === "checkbox") | (type === "radio") &&
 	css`
 		padding: 0;
+		margin-right: 7px;
 
 		${size === "big"
 			? css`
