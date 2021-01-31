@@ -19,6 +19,8 @@ export const buttonStyles = (
 	font-weight: 600;
 	padding: 15px 25px;
 	border-radius: 100px;
+	white-space: nowrap;
+	hyphens: auto;
 
 	${fullWidth &&
 	css`
