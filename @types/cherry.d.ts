@@ -152,7 +152,8 @@ interface HeadingProps {
 	theme?: object;
 }
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputProps
+	extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
 	children?: React.ReactNode;
 	error?: boolean;
 	success?: boolean;
@@ -160,7 +161,8 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	theme?: object;
 }
 
-interface SelectProps extends React.InputHTMLAttributes<HTMLSelectElement> {
+interface SelectProps
+	extends Omit<React.InputHTMLAttributes<HTMLSelectElement>, "size"> {
 	children?: React.ReactNode;
 	error?: boolean;
 	success?: boolean;
@@ -168,7 +170,8 @@ interface SelectProps extends React.InputHTMLAttributes<HTMLSelectElement> {
 	theme?: object;
 }
 
-interface TextareaProps extends React.InputHTMLAttributes<HTMLTextAreaElement> {
+interface TextareaProps
+	extends Omit<React.InputHTMLAttributes<HTMLTextAreaElement>, "size"> {
 	children?: React.ReactNode;
 	error?: boolean;
 	success?: boolean;
@@ -190,15 +193,15 @@ interface MinHeightProps {
 }
 
 interface SpaceProps {
-	size?: number;
-	xs?: number;
-	sm?: number;
-	md?: number;
-	lg?: number;
-	xl?: number;
-	xxl?: number;
-	xxxl?: number;
-	horizontal?: number;
+	size?: number | "none";
+	xs?: number | "none";
+	sm?: number | "none";
+	md?: number | "none";
+	lg?: number | "none";
+	xl?: number | "none";
+	xxl?: number | "none";
+	xxxl?: number | "none";
+	horizontal?: boolean;
 }
 
 interface TableOverflowProps {
