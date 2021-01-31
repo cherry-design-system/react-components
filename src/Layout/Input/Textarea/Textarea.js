@@ -1,6 +1,6 @@
 import React from "react";
 import { localTheme } from "../../../theme";
-import { Arrow } from "../../../svg/Arrow";
+import { Label } from "../../Label";
 import { inputStyles } from "../Input.styles";
 
 function Textarea({
@@ -8,22 +8,26 @@ function Textarea({
 	size = "default",
 	error,
 	success,
+	label,
 	theme = localTheme,
 	...props
 }) {
 	return (
-		<textarea
-			className={className}
-			css={inputStyles(
-				theme,
-				"text",
-				size,
-				props.disabled,
-				success,
-				error,
-			)}
-			{...props}
-		/>
+		<>
+			{label && <Label htmlFor={props.id}>{label}</Label>}
+			<textarea
+				className={className}
+				css={inputStyles(
+					theme,
+					"text",
+					size,
+					props.disabled,
+					success,
+					error,
+				)}
+				{...props}
+			/>
+		</>
 	);
 }
 

@@ -168,6 +168,7 @@ interface SelectProps
 	error?: boolean;
 	success?: boolean;
 	size?: "default" | "big";
+	label?: string;
 	theme?: object;
 }
 
@@ -177,6 +178,7 @@ interface TextareaProps
 	error?: boolean;
 	success?: boolean;
 	size?: "default" | "big";
+	label?: string;
 	theme?: object;
 }
 
