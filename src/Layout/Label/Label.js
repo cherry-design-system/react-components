@@ -7,6 +7,7 @@ function Label({
 	children,
 	error,
 	success,
+	htmlFor,
 	theme = localTheme,
 	...props
 }) {
@@ -14,6 +15,7 @@ function Label({
 		<label
 			className={className}
 			css={labelStyles(theme, error, success)}
+			htmlFor={htmlFor}
 			{...props}
 		>
 			{children}

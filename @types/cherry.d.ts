@@ -158,6 +158,7 @@ interface InputProps
 	error?: boolean;
 	success?: boolean;
 	size?: "default" | "big";
+	label?: string;
 	theme?: object;
 }
 
@@ -183,6 +184,7 @@ interface LabelProps extends React.InputHTMLAttributes<HTMLLabelElement> {
 	children?: React.ReactNode;
 	error?: boolean;
 	success?: boolean;
+	htmlFor?: string;
 	theme?: object;
 }
 
