@@ -177,6 +177,7 @@ export const selectWrapperStyles = (theme, size, success, error) => css`
 		min-height: ${size === "big" ? "55px" : "51px"};
 
 		&:disabled ~ svg {
+			& polyline,
 			& path {
 				stroke: ${theme.colors.gray};
 			}
@@ -187,6 +188,7 @@ export const selectWrapperStyles = (theme, size, success, error) => css`
 		opacity: 1;
 		transform: translate3d(0, 0, 0) rotate(180deg);
 
+		& polyline,
 		& path {
 			stroke: ${theme.colors.secondary};
 		}
@@ -200,6 +202,7 @@ export const selectWrapperStyles = (theme, size, success, error) => css`
 		pointer-events: none;
 		transform: translate3d(0, 0, 0) rotate(0deg);
 
+		& polyline,
 		& path {
 			stroke: ${theme.colors.secondary};
 
