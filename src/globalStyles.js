@@ -14,6 +14,7 @@ const globalStyles = (
 				margin: 0;
 				padding: 0;
 				min-height: 100%;
+				scroll-behavior: smooth;
 			}
 
 			body {
