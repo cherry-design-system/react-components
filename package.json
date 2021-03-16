@@ -1,6 +1,6 @@
 {
 	"name": "cherry-components",
-	"version": "0.0.1-14",
+	"version": "0.0.1-15",
 	"description": "Cherry React Components",
 	"main": "dist/cherry.js",
 	"module": "dist/cherry.module.js",
