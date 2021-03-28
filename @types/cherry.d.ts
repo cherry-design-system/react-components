@@ -160,6 +160,7 @@ interface InputProps
 	success?: boolean;
 	size?: "default" | "big";
 	label?: string;
+	fullWidth?: boolean;
 	theme?: object;
 }
 
@@ -170,6 +171,7 @@ interface SelectProps
 	success?: boolean;
 	size?: "default" | "big";
 	label?: string;
+	fullWidth?: boolean;
 	theme?: object;
 }
 
@@ -180,6 +182,7 @@ interface TextareaProps
 	success?: boolean;
 	size?: "default" | "big";
 	label?: string;
+	fullWidth?: boolean;
 	theme?: object;
 }
 

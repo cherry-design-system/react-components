@@ -12,6 +12,7 @@ function Select({
 	success,
 	label,
 	theme = localTheme,
+	fullWidth = true,
 	...props
 }) {
 	return (
@@ -21,7 +22,15 @@ function Select({
 					{label}
 				</Label>
 			)}
-			<div css={selectWrapperStyles(theme, size, success, error)}>
+			<div
+				css={selectWrapperStyles(
+					theme,
+					size,
+					success,
+					error,
+					fullWidth,
+				)}
+			>
 				<select
 					className={className}
 					css={inputStyles(
@@ -31,6 +40,7 @@ function Select({
 						props.disabled,
 						success,
 						error,
+						fullWidth,
 					)}
 					{...props}
 				>

@@ -10,6 +10,7 @@ function Textarea({
 	success,
 	label,
 	theme = localTheme,
+	fullWidth = true,
 	...props
 }) {
 	return (
@@ -28,6 +29,7 @@ function Textarea({
 					props.disabled,
 					success,
 					error,
+					fullWidth,
 				)}
 				{...props}
 			/>

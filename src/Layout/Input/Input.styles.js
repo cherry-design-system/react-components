@@ -6,7 +6,15 @@ import {
 } from "../../helperStyles";
 import { Breakpoints, mq } from "../../mq";
 
-export const inputStyles = (theme, type, size, disabled, success, error) => css`
+export const inputStyles = (
+	theme,
+	type,
+	size,
+	disabled,
+	success,
+	error,
+	fullWidth,
+) => css`
 	appearance: none;
 	border: none;
 	transition: all 0.3s ease;
@@ -39,9 +47,14 @@ export const inputStyles = (theme, type, size, disabled, success, error) => css`
 		(type === "email") |
 		(type === "password") &&
 	css`
-		display: block;
-		width: 100%;
+		display: inline-block;
 		box-shadow: 0 0 0 0 ${theme.colors.secondaryLight};
+
+		${fullWidth &&
+		css`
+			display: block;
+			width: 100%;
+		`}
 
 		${error &&
 		css`
@@ -95,10 +108,16 @@ export const inputStyles = (theme, type, size, disabled, success, error) => css`
 	`}
 `;
 
-export const checkboxWrapperStyles = (theme, type, size) => css`
+export const checkboxWrapperStyles = (theme, type, size, fullWidth) => css`
 	position: relative;
-	display: block;
+	display: inline-block;
 	line-height: 1;
+
+	${fullWidth &&
+	css`
+		display: block;
+		width: 100%;
+	`}
 
 	${type === "checkbox" &&
 	css`
@@ -167,15 +186,31 @@ export const checkboxWrapperStyles = (theme, type, size) => css`
 	`}
 `;
 
-export const selectWrapperStyles = (theme, size, success, error) => css`
+export const selectWrapperStyles = (
+	theme,
+	size,
+	success,
+	error,
+	fullWidth,
+) => css`
 	position: relative;
-	display: block;
+	display: inline-block;
 	line-height: 1;
 
-	& select {
+	${fullWidth &&
+	css`
+		display: block;
 		width: 100%;
+	`}
+
+	& select {
 		min-height: ${size === "big" ? "55px" : "51px"};
 		padding-right: 40px;
+
+		${fullWidth &&
+		css`
+			width: 100%;
+		`}
 
 		&:disabled ~ svg {
 			& polyline,
