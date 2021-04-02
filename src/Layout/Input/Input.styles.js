@@ -119,7 +119,7 @@ export const radioCheckWrapperStyles = (theme, type, size, fullWidth) => css`
 		width: 100%;
 	`}
 
-	& input, {
+	& input {
 		vertical-align: top;
 	}
 
