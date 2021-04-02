@@ -1,13 +1,18 @@
 import { css } from "@emotion/react";
 import { Breakpoints, mq } from "../../mq";
 
-export const labelStyles = (theme, error, success) => css`
+export const labelStyles = (theme, error, success, fullWidth) => css`
 	color: ${theme.colors.gray};
 	display: inline-block;
 	vertical-align: middle;
-	padding: 0;
+	padding: 0 7px 0 0;
 	margin: 0;
 	line-height: ${theme.sizes.text.lineheight.mobile};
+
+	${fullWidth &&
+	css`
+		width: 100%;
+	`}
 
 	${mq(Breakpoints.lg)} {
 		line-height: ${theme.sizes.text.lineheight.desktop};

@@ -10,7 +10,7 @@ function Textarea({
 	success,
 	label,
 	theme = localTheme,
-	fullWidth = true,
+	fullWidth,
 	...props
 }) {
 	return (

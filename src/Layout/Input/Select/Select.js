@@ -12,13 +12,18 @@ function Select({
 	success,
 	label,
 	theme = localTheme,
-	fullWidth = true,
+	fullWidth,
 	...props
 }) {
 	return (
 		<>
 			{label && (
-				<Label htmlFor={props.id} error={error} success={success}>
+				<Label
+					htmlFor={props.id}
+					error={error}
+					success={success}
+					fullWidth={fullWidth}
+				>
 					{label}
 				</Label>
 			)}

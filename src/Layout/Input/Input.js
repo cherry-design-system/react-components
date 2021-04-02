@@ -12,7 +12,7 @@ function Input({
 	success,
 	error,
 	label,
-	fullWidth = true,
+	fullWidth,
 	theme = localTheme,
 	...props
 }) {

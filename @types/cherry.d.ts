@@ -190,6 +190,7 @@ interface LabelProps extends React.InputHTMLAttributes<HTMLLabelElement> {
 	children?: React.ReactNode;
 	error?: boolean;
 	success?: boolean;
+	fullWidth?: boolean;
 	htmlFor?: string;
 	theme?: object;
 }

@@ -7,6 +7,7 @@ function Label({
 	children,
 	error,
 	success,
+	fullWidth,
 	htmlFor,
 	theme = localTheme,
 	...props
@@ -14,7 +15,7 @@ function Label({
 	return (
 		<label
 			className={className}
-			css={labelStyles(theme, error, success)}
+			css={labelStyles(theme, error, success, fullWidth)}
 			htmlFor={htmlFor}
 			{...props}
 		>
