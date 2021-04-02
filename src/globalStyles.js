@@ -7,8 +7,6 @@ const theme = localTheme;
 const globalStyles = (
 	<Global
 		styles={css`
-			@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-
 			html,
 			body {
 				margin: 0;
@@ -61,11 +59,6 @@ const globalStyles = (
 				height: 0;
 				overflow: visible;
 				margin: 10px 0;
-			}
-
-			b,
-			strong {
-				font-weight: bolder;
 			}
 
 			pre,

@@ -1,6 +1,6 @@
 import React from "react";
 import { localTheme } from "../../theme";
-import { inputStyles, checkboxWrapperStyles } from "./Input.styles";
+import { inputStyles, radioCheckWrapperStyles } from "./Input.styles";
 import { Check } from "../../svg/Check";
 import { Label } from "../Label";
 
@@ -18,7 +18,7 @@ function Input({
 }) {
 	if ((type === "checkbox") | (type === "radio")) {
 		return (
-			<div css={checkboxWrapperStyles(theme, type, size, fullWidth)}>
+			<div css={radioCheckWrapperStyles(theme, type, size, fullWidth)}>
 				<input
 					type={type}
 					className={className}

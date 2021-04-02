@@ -108,7 +108,7 @@ export const inputStyles = (
 	`}
 `;
 
-export const checkboxWrapperStyles = (theme, type, size, fullWidth) => css`
+export const radioCheckWrapperStyles = (theme, type, size, fullWidth) => css`
 	position: relative;
 	display: inline-block;
 	line-height: 1;
@@ -118,6 +118,24 @@ export const checkboxWrapperStyles = (theme, type, size, fullWidth) => css`
 		display: block;
 		width: 100%;
 	`}
+
+	& input, {
+		vertical-align: top;
+	}
+
+	${size === "big"
+		? css`
+				& label {
+					max-width: calc(100% - 40px);
+					margin-top: 3px;
+				}
+		  `
+		: css`
+				& label {
+					max-width: calc(100% - 30px);
+					margin-top: -2px;
+				}
+		  `}
 
 	${type === "checkbox" &&
 	css`
