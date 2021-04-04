@@ -24,6 +24,8 @@ declare class H6 extends React.Component<HeadingProps, any> {}
 
 declare class Input extends React.Component<InputProps, any> {}
 
+declare class ToggleInput extends React.Component<ToggleInputProps, any> {}
+
 declare class Select extends React.Component<SelectProps, any> {}
 
 declare class Textarea extends React.Component<TextareaProps, any> {}
@@ -164,6 +166,18 @@ interface InputProps
 	theme?: object;
 }
 
+interface ToggleInputProps
+	extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size", "type"> {
+	type: "checkbox" | "radio";
+	children?: React.ReactNode;
+	error?: boolean;
+	success?: boolean;
+	size?: "default" | "big";
+	label?: string;
+	fullWidth?: boolean;
+	theme?: object;
+}
+
 interface SelectProps
 	extends Omit<React.InputHTMLAttributes<HTMLSelectElement>, "size"> {
 	children?: React.ReactNode;
@@ -230,6 +244,7 @@ export {
 	H5,
 	H6,
 	Input,
+	ToggleInput,
 	Select,
 	Textarea,
 	Label,
