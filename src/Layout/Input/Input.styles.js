@@ -112,6 +112,7 @@ export const radioCheckWrapperStyles = (theme, type, size, fullWidth) => css`
 	position: relative;
 	display: inline-flex;
 	line-height: 1;
+	vertical-align: middle;
 
 	${fullWidth &&
 	css`
@@ -131,12 +132,14 @@ export const radioCheckWrapperStyles = (theme, type, size, fullWidth) => css`
 		? css`
 				& label {
 					max-width: calc(100% - 40px);
+					min-width: calc(100% - 32px);
 					margin-top: 4px;
 				}
 		  `
 		: css`
 				& label {
 					max-width: calc(100% - 30px);
+					min-width: calc(100% - 22px);
 					margin-top: -1px;
 				}
 		  `}
@@ -152,11 +155,13 @@ export const radioCheckWrapperStyles = (theme, type, size, fullWidth) => css`
 			? css`
 					& label {
 						max-width: calc(100% - 70px);
+						min-width: calc(100% - 56px);
 					}
 			  `
 			: css`
 					& label {
 						max-width: calc(100% - 60px);
+						min-width: calc(100% - 46px);
 					}
 			  `}
 	`}
