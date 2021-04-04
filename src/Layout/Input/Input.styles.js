@@ -111,12 +111,12 @@ export const inputStyles = (
 export const radioCheckWrapperStyles = (theme, type, size, fullWidth) => css`
 	position: relative;
 	display: inline-flex;
-	width: 100%;
 	line-height: 1;
 
 	${fullWidth &&
 	css`
 		display: flex;
+		width: 100%;
 	`}
 
 	& input {
