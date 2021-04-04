@@ -6,7 +6,6 @@ import { toggleInputStyles } from "./ToggleInput.styles";
 
 function ToggleInput({
 	className,
-	children,
 	size = "default",
 	success,
 	error,

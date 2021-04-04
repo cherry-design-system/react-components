@@ -167,9 +167,8 @@ interface InputProps
 }
 
 interface ToggleInputProps
-	extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size", "type"> {
-	type: "checkbox" | "radio";
-	children?: React.ReactNode;
+	extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
+	type?: "checkbox" | "radio";
 	error?: boolean;
 	success?: boolean;
 	size?: "default" | "big";
