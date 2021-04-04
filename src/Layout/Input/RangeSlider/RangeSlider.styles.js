@@ -11,7 +11,7 @@ export const rangeSliderStyles = (theme, size, disabled) => css`
 	&::-webkit-slider-runnable-track {
 		width: 100%;
 		cursor: pointer;
-		background: ${theme.colors.grayLight};
+		background: ${theme.colors.light};
 		border-radius: 25px;
 		border: 2px solid ${theme.colors.grayLight};
 		transition: all 0.3s ease;
@@ -32,7 +32,7 @@ export const rangeSliderStyles = (theme, size, disabled) => css`
 		width: 100%;
 		height: 6px;
 		cursor: pointer;
-		background: ${theme.colors.grayLight};
+		background: ${theme.colors.light};
 		border-radius: 25px;
 		border: 2px solid ${theme.colors.grayLight};
 		transition: all 0.3s ease;
@@ -67,7 +67,7 @@ export const rangeSliderStyles = (theme, size, disabled) => css`
 
 		&::-webkit-slider-runnable-track {
 			border-color: ${theme.colors.secondary};
-			background: ${theme.colors.grayLight};
+			background: ${theme.colors.light};
 			box-shadow: 0 0 0 4px ${theme.colors.secondaryLight};
 		}
 
@@ -159,6 +159,7 @@ export const rangeSliderStyles = (theme, size, disabled) => css`
 	css`
 		&::-webkit-slider-runnable-track {
 			cursor: not-allowed;
+			background: ${theme.colors.grayLight};
 		}
 
 		&::-webkit-slider-thumb {
@@ -168,6 +169,7 @@ export const rangeSliderStyles = (theme, size, disabled) => css`
 
 		&::-moz-range-track {
 			cursor: not-allowed;
+			background: ${theme.colors.grayLight};
 		}
 
 		&::-moz-range-thumb {
