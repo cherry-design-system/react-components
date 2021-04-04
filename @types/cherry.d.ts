@@ -26,6 +26,8 @@ declare class Input extends React.Component<InputProps, any> {}
 
 declare class ToggleInput extends React.Component<ToggleInputProps, any> {}
 
+declare class RangeSlider extends React.Component<RangeSliderProps, any> {}
+
 declare class Select extends React.Component<SelectProps, any> {}
 
 declare class Textarea extends React.Component<TextareaProps, any> {}
@@ -177,6 +179,13 @@ interface ToggleInputProps
 	theme?: object;
 }
 
+interface RangeSliderProps
+	extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
+	type?: "range";
+	size?: "default" | "big";
+	theme?: object;
+}
+
 interface SelectProps
 	extends Omit<React.InputHTMLAttributes<HTMLSelectElement>, "size"> {
 	children?: React.ReactNode;
@@ -242,10 +251,11 @@ export {
 	H4,
 	H5,
 	H6,
-	Input,
-	ToggleInput,
+	RangeSlider,
 	Select,
 	Textarea,
+	ToggleInput,
+	Input,
 	Label,
 	MinHeight,
 	Space,
