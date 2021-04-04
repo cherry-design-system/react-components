@@ -11,6 +11,7 @@ export {
 	H5,
 	H6,
 	Input,
+	ToggleInput,
 	Select,
 	Textarea,
 	Label,

@@ -5,8 +5,8 @@ export const labelStyles = (theme, error, success, fullWidth) => css`
 	color: ${theme.colors.gray};
 	display: inline-block;
 	vertical-align: middle;
-	padding: 0 7px 0 0;
-	margin: 0;
+	padding: 0 10px 0 0;
+	margin: auto 0;
 	line-height: ${theme.sizes.text.lineheight.mobile};
 
 	${fullWidth &&

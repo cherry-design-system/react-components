@@ -3,7 +3,7 @@ export { Container } from "./Container";
 export { FontStyle } from "./FontStyle";
 export { Row, Col } from "./Grid";
 export { H1, H2, H3, H4, H5, H6 } from "./Heading";
-export { Select, Textarea, Input } from "./Input";
+export { Select, Textarea, Input, ToggleInput } from "./Input";
 export { Label } from "./Label";
 export { MinHeight } from "./MinHeight";
 export { Space } from "./Space";
