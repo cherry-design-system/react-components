@@ -139,14 +139,22 @@ export const radioCheckWrapperStyles = (theme, type, size, fullWidth) => css`
 				& label {
 					max-width: calc(100% - 40px);
 					min-width: calc(100% - 32px);
-					margin-top: 4px;
+					margin-top: 5px;
+
+					${mq(Breakpoints.lg)} {
+						margin-top: 4px;
+					}
 				}
 		  `
 		: css`
 				& label {
 					max-width: calc(100% - 30px);
 					min-width: calc(100% - 22px);
-					margin-top: -1px;
+					margin-top: 0;
+
+					${mq(Breakpoints.lg)} {
+						margin-top: -1px;
+					}
 				}
 		  `}
 
