@@ -5,12 +5,14 @@ const localStyle = (size, horizontal) =>
 	horizontal
 		? css`
 				display: inline-block;
-				height: 0;
-				width: ${size}px;
+				max-height: 0;
+				min-width: ${size}px;
+				max-width: ${size}px;
 		  `
 		: css`
 				display: block;
-				height: ${size}px;
+				min-height: ${size}px;
+				max-height: ${size}px;
 		  `;
 
 const spaceStyles = (size, xs, sm, md, lg, xl, xxl, xxxl, horizontal) => css`
