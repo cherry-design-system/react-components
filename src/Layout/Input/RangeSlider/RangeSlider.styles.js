@@ -112,6 +112,7 @@ export const rangeSliderStyles = (theme, size, disabled) => css`
 	${size === "big"
 		? css`
 				min-width: 200px;
+				height: 32px;
 
 				&::-webkit-slider-runnable-track {
 					height: 14px;
@@ -134,6 +135,7 @@ export const rangeSliderStyles = (theme, size, disabled) => css`
 		  `
 		: css`
 				min-width: 130px;
+				height: 22px;
 
 				&::-webkit-slider-runnable-track {
 					height: 10px;
@@ -157,6 +159,11 @@ export const rangeSliderStyles = (theme, size, disabled) => css`
 
 	${disabled &&
 	css`
+		&:disabled {
+			background: transparent;
+			border-color: transparent;
+		}
+
 		&::-webkit-slider-runnable-track {
 			cursor: not-allowed;
 			background: ${theme.colors.grayLight};
