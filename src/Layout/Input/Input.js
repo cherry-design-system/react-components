@@ -6,7 +6,6 @@ import { Label } from "../Label";
 
 function Input({
 	className,
-	children,
 	size = "default",
 	type = "text",
 	success,
