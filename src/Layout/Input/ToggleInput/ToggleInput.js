@@ -12,6 +12,7 @@ function ToggleInput({
 	label,
 	type = "checkbox",
 	fullWidth,
+	variant = "secondary",
 	theme = localTheme,
 	...props
 }) {
@@ -22,10 +23,11 @@ function ToggleInput({
 				"toggle-input",
 				size,
 				fullWidth,
+				variant,
 			)}
 		>
 			<div
-				css={toggleInputStyles(theme, size)}
+				css={toggleInputStyles(theme, size, variant)}
 				className="toggle-input-inner"
 			>
 				<input type="checkbox" className={className} {...props} />

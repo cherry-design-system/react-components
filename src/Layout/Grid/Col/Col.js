@@ -32,6 +32,7 @@ function Col({
 	lastXxxl,
 	display,
 	fullScreen,
+	sticky,
 	theme = localTheme,
 }) {
 	return (
@@ -64,8 +65,9 @@ function Col({
 				lastXxxl,
 				display,
 				fullScreen,
+				sticky,
 			)}
-			className={className}
+			className={className ? `col ${className}` : "col"}
 			id={id}
 			data-col
 		>

@@ -9,8 +9,9 @@ function Textarea({
 	error,
 	success,
 	label,
-	theme = localTheme,
 	fullWidth,
+	variant = "secondary",
+	theme = localTheme,
 	...props
 }) {
 	return (
@@ -30,6 +31,7 @@ function Textarea({
 					success,
 					error,
 					fullWidth,
+					variant,
 				)}
 				{...props}
 			/>
