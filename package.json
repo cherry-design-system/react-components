@@ -30,7 +30,7 @@
 		"@babel/plugin-proposal-class-properties": "^7.13.0",
 		"@babel/preset-env": "^7.13.12",
 		"@babel/preset-react": "^7.13.13",
-		"@emotion/babel-plugin": "^11.2.0",
+		"@emotion/babel-plugin": "^11.3.0",
 		"@emotion/babel-preset-css-prop": "^11.2.0",
 		"@emotion/eslint-plugin": "^11.2.0",
 		"@emotion/react": "^11.1.5",
