@@ -13,12 +13,13 @@ function Input({
 	error,
 	label,
 	fullWidth,
+	variant = "secondary",
 	theme = localTheme,
 	...props
 }) {
 	if ((type === "checkbox") | (type === "radio")) {
 		return (
-			<div css={radioCheckWrapperStyles(theme, type, size, fullWidth)}>
+			<div css={radioCheckWrapperStyles(theme, type, size, fullWidth, variant)}>
 				<input
 					type={type}
 					className={className}
@@ -30,6 +31,7 @@ function Input({
 						success,
 						error,
 						fullWidth,
+						variant,
 					)}
 					{...props}
 				/>
@@ -61,6 +63,7 @@ function Input({
 					success,
 					error,
 					fullWidth,
+					variant,
 				)}
 				{...props}
 			/>
