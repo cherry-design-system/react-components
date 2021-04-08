@@ -17,7 +17,12 @@ function Textarea({
 	return (
 		<>
 			{label && (
-				<Label htmlFor={props.id} error={error} success={success}>
+				<Label
+					htmlFor={props.id}
+					error={error}
+					success={success}
+					theme={theme}
+				>
 					{label}
 				</Label>
 			)}

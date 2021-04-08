@@ -34,7 +34,12 @@ function ToggleInput({
 				<div className="toggle-input-slider" />
 			</div>
 			{label && (
-				<Label htmlFor={props.id} error={error} success={success}>
+				<Label
+					htmlFor={props.id}
+					error={error}
+					success={success}
+					theme={theme}
+				>
 					{label}
 				</Label>
 			)}

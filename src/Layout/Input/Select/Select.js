@@ -24,6 +24,7 @@ function Select({
 					error={error}
 					success={success}
 					fullWidth={fullWidth}
+					theme={theme}
 				>
 					{label}
 				</Label>
