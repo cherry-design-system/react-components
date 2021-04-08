@@ -2,7 +2,6 @@ import { css } from "@emotion/react";
 import { mq, Breakpoints } from "../../../mq";
 
 const col = css`
-	position: relative;
 	width: 100%;
 	min-height: 1px;
 	flex-basis: 0;
@@ -118,6 +117,7 @@ export const colStyles = (
 	lastXxxl,
 	display,
 	fullScreen,
+	sticky,
 ) => css`
 	${display &&
 	css`
@@ -154,6 +154,17 @@ export const colStyles = (
 		${mq(Breakpoints.lg)} {
 			height: calc(100vh - ${theme.spacing.paddingTopBody.desktop});
 			overflow-y: scroll;
+			-webkit-overflow-scrolling: touch;
+		}
+	`}
+
+	${sticky &&
+	css`
+		${mq(Breakpoints.lg)} {
+			position: sticky;
+			top: ${theme.spacing.paddingTopBody.desktop};
+			max-height: calc(100vh - ${theme.spacing.paddingTopBody.desktop});
+			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
 		}
 	`}

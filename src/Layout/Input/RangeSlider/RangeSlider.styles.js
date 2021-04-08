@@ -1,7 +1,14 @@
 import { css } from "@emotion/react";
 import { resetButtonStyles } from "../../../helperStyles";
+import {
+	activeColorsStyles,
+	defaultBackgroundStyles,
+	defaultShadowStyles,
+	hoverColorsStyles,
+	focusColorsStyles,
+} from "../Input.styles";
 
-export const rangeSliderStyles = (theme, size, disabled) => css`
+export const rangeSliderStyles = (theme, size, variant, disabled) => css`
 	padding: 0;
 	height: 10px;
 	font-size: 0;
@@ -15,17 +22,17 @@ export const rangeSliderStyles = (theme, size, disabled) => css`
 		border-radius: 25px;
 		border: 2px solid ${theme.colors.grayLight};
 		transition: all 0.3s ease;
-		box-shadow: 0 0 0 0 ${theme.colors.secondaryLight};
+		${defaultShadowStyles(theme, variant)};
 	}
 
 	&::-webkit-slider-thumb {
 		${resetButtonStyles}
 		border: 0 solid transparent;
 		border-radius: 50%;
-		background: ${theme.colors.secondary};
 		cursor: pointer;
-		box-shadow: 0 0 0 0 ${theme.colors.secondaryLight};
 		transition: all 0.3s ease;
+		${defaultBackgroundStyles(theme, variant)};
+		${defaultShadowStyles(theme, variant)};
 	}
 
 	&::-moz-range-track {
@@ -36,7 +43,7 @@ export const rangeSliderStyles = (theme, size, disabled) => css`
 		border-radius: 25px;
 		border: 2px solid ${theme.colors.grayLight};
 		transition: all 0.3s ease;
-		box-shadow: 0 0 0 0 ${theme.colors.secondaryLight};
+		${defaultShadowStyles(theme, variant)};
 	}
 
 	&::-moz-range-thumb {
@@ -44,20 +51,20 @@ export const rangeSliderStyles = (theme, size, disabled) => css`
 		height: 22px;
 		width: 22px;
 		border-radius: 50%;
-		background: ${theme.colors.secondary};
 		cursor: pointer;
-		box-shadow: 0 0 0 0 ${theme.colors.secondaryLight};
 		transition: all 0.3s ease;
+		${defaultBackgroundStyles(theme, variant)};
+		${defaultShadowStyles(theme, variant)};
 	}
 
 	@media (hover: hover) {
 		&:hover:not([disabled]) {
 			&::-webkit-slider-runnable-track {
-				border-color: ${theme.colors.secondary};
+				${hoverColorsStyles(theme, variant)};
 			}
 
 			&::-moz-range-track {
-				border-color: ${theme.colors.secondary};
+				${hoverColorsStyles(theme, variant)};
 			}
 		}
 	}
@@ -66,26 +73,26 @@ export const rangeSliderStyles = (theme, size, disabled) => css`
 		box-shadow: none;
 
 		&::-webkit-slider-runnable-track {
-			border-color: ${theme.colors.secondary};
 			background: ${theme.colors.light};
-			box-shadow: 0 0 0 4px ${theme.colors.secondaryLight};
+			${focusColorsStyles(theme, variant)};
 		}
 
 		&::-webkit-slider-thumb {
 			border-color: ${theme.colors.grayLight};
-			box-shadow: 0 0 0 4px ${theme.colors.secondaryLight};
 			outline: none;
+			${focusColorsStyles(theme, variant)};
 		}
 
 		&::-moz-range-track {
-			border-color: ${theme.colors.secondary};
-			box-shadow: 0 0 0 4px ${theme.colors.secondaryLight};
+			background: ${theme.colors.light};
+			${focusColorsStyles(theme, variant)};
 		}
 
 		&::-moz-range-thumb {
-			border-color: ${theme.colors.grayLight};
-			box-shadow: 0 0 0 4px ${theme.colors.secondaryLight};
 			outline: none;
+			border-color: ${theme.colors.grayLight};
+			outline: none;
+			${focusColorsStyles(theme, variant)};
 		}
 	}
 
@@ -93,19 +100,19 @@ export const rangeSliderStyles = (theme, size, disabled) => css`
 		box-shadow: none;
 
 		&::-webkit-slider-runnable-track {
-			box-shadow: 0 0 0 2px ${theme.colors.secondaryLight};
+			${activeColorsStyles(theme, variant)};
 		}
 
 		&::-webkit-slider-thumb {
-			box-shadow: 0 0 0 2px ${theme.colors.secondaryLight};
+			${activeColorsStyles(theme, variant)};
 		}
 
 		&::-moz-range-track {
-			box-shadow: 0 0 0 2px ${theme.colors.secondaryLight};
+			${activeColorsStyles(theme, variant)};
 		}
 
 		&::-moz-range-thumb {
-			box-shadow: 0 0 0 2px ${theme.colors.secondaryLight};
+			${activeColorsStyles(theme, variant)};
 		}
 	}
 

@@ -6,6 +6,8 @@ import { inputStyles } from "../Input.styles";
 function RangeSlider({
 	className,
 	size = "default",
+	fullWidth,
+	variant = "secondary",
 	theme = localTheme,
 	...props
 }) {
@@ -20,7 +22,8 @@ function RangeSlider({
 				props.disabled,
 				false,
 				false,
-				false,
+				fullWidth,
+				variant,
 			)}
 			{...props}
 		/>

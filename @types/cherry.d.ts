@@ -137,6 +137,7 @@ interface ColProps {
 		| "inline-flex"
 		| "none";
 	fullScreen?: boolean;
+	sticky?: boolean;
 	theme?: object;
 }
 
@@ -165,6 +166,7 @@ interface InputProps
 	size?: "default" | "big";
 	label?: string;
 	fullWidth?: boolean;
+	variant?: "primary" | "secondary" | "tertiary";
 	theme?: object;
 }
 
@@ -176,6 +178,7 @@ interface ToggleInputProps
 	size?: "default" | "big";
 	label?: string;
 	fullWidth?: boolean;
+	variant?: "primary" | "secondary" | "tertiary";
 	theme?: object;
 }
 
@@ -183,6 +186,8 @@ interface RangeSliderProps
 	extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
 	type?: "range";
 	size?: "default" | "big";
+	fullWidth?: boolean;
+	variant?: "primary" | "secondary" | "tertiary";
 	theme?: object;
 }
 
@@ -194,6 +199,7 @@ interface SelectProps
 	size?: "default" | "big";
 	label?: string;
 	fullWidth?: boolean;
+	variant?: "primary" | "secondary" | "tertiary";
 	theme?: object;
 }
 
@@ -205,6 +211,7 @@ interface TextareaProps
 	size?: "default" | "big";
 	label?: string;
 	fullWidth?: boolean;
+	variant?: "primary" | "secondary" | "tertiary";
 	theme?: object;
 }
 

@@ -86,8 +86,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.default};
 			margin-left: ${theme.spacing.marginRow.default};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.default};
 				padding-left: ${theme.spacing.gutterCol.default};
 			}
@@ -98,8 +97,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.medium};
 			margin-left: ${theme.spacing.marginRow.medium};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.medium};
 				padding-left: ${theme.spacing.gutterCol.medium};
 			}
@@ -110,8 +108,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.big};
 			margin-left: ${theme.spacing.marginRow.big};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.big};
 				padding-left: ${theme.spacing.gutterCol.big};
 			}
@@ -124,8 +121,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.default};
 			margin-left: ${theme.spacing.marginRow.default};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.default};
 				padding-left: ${theme.spacing.gutterCol.default};
 			}
@@ -136,8 +132,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.medium};
 			margin-left: ${theme.spacing.marginRow.medium};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.medium};
 				padding-left: ${theme.spacing.gutterCol.medium};
 			}
@@ -148,8 +143,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.big};
 			margin-left: ${theme.spacing.marginRow.big};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.big};
 				padding-left: ${theme.spacing.gutterCol.big};
 			}
@@ -162,8 +156,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.default};
 			margin-left: ${theme.spacing.marginRow.default};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.default};
 				padding-left: ${theme.spacing.gutterCol.default};
 			}
@@ -174,8 +167,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.medium};
 			margin-left: ${theme.spacing.marginRow.medium};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.medium};
 				padding-left: ${theme.spacing.gutterCol.medium};
 			}
@@ -186,8 +178,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.big};
 			margin-left: ${theme.spacing.marginRow.big};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.big};
 				padding-left: ${theme.spacing.gutterCol.big};
 			}
@@ -200,8 +191,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.default};
 			margin-left: ${theme.spacing.marginRow.default};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.default};
 				padding-left: ${theme.spacing.gutterCol.default};
 			}
@@ -212,8 +202,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.medium};
 			margin-left: ${theme.spacing.marginRow.medium};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.medium};
 				padding-left: ${theme.spacing.gutterCol.medium};
 			}
@@ -224,8 +213,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.big};
 			margin-left: ${theme.spacing.marginRow.big};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.big};
 				padding-left: ${theme.spacing.gutterCol.big};
 			}
@@ -238,8 +226,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.default};
 			margin-left: ${theme.spacing.marginRow.default};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.default};
 				padding-left: ${theme.spacing.gutterCol.default};
 			}
@@ -250,8 +237,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.medium};
 			margin-left: ${theme.spacing.marginRow.medium};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.medium};
 				padding-left: ${theme.spacing.gutterCol.medium};
 			}
@@ -262,8 +248,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.big};
 			margin-left: ${theme.spacing.marginRow.big};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.big};
 				padding-left: ${theme.spacing.gutterCol.big};
 			}
@@ -276,8 +261,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.default};
 			margin-left: ${theme.spacing.marginRow.default};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.default};
 				padding-left: ${theme.spacing.gutterCol.default};
 			}
@@ -288,8 +272,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.medium};
 			margin-left: ${theme.spacing.marginRow.medium};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.medium};
 				padding-left: ${theme.spacing.gutterCol.medium};
 			}
@@ -300,8 +283,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.big};
 			margin-left: ${theme.spacing.marginRow.big};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.big};
 				padding-left: ${theme.spacing.gutterCol.big};
 			}
@@ -314,8 +296,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.default};
 			margin-left: ${theme.spacing.marginRow.default};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.default};
 				padding-left: ${theme.spacing.gutterCol.default};
 			}
@@ -326,8 +307,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.medium};
 			margin-left: ${theme.spacing.marginRow.medium};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.medium};
 				padding-left: ${theme.spacing.gutterCol.medium};
 			}
@@ -338,8 +318,7 @@ export const rowStyles = (
 			margin-right: ${theme.spacing.marginRow.big};
 			margin-left: ${theme.spacing.marginRow.big};
 
-			& [data-col],
-			& > * {
+			& .col {
 				padding-right: ${theme.spacing.gutterCol.big};
 				padding-left: ${theme.spacing.gutterCol.big};
 			}

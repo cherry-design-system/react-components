@@ -1,7 +1,15 @@
 import { css } from "@emotion/react";
 import { resetButtonStyles } from "../../../helperStyles";
+import {
+	activeColorsStyles,
+	defaultBackgroundStyles,
+	defaultLightBackgroundStyles,
+	defaultShadowStyles,
+	focusColorsStyles,
+	hoverColorsStyles,
+} from "../Input.styles";
 
-export const toggleInputStyles = (theme, size) => css`
+export const toggleInputStyles = (theme, size, variant) => css`
 	display: inline-block;
 	margin: auto 0;
 	position: relative;
@@ -24,7 +32,7 @@ export const toggleInputStyles = (theme, size) => css`
 	& input:checked ~ .toggle-input-slider {
 		&:before {
 			max-width: 46px;
-			background: ${theme.colors.secondaryLight};
+			${defaultLightBackgroundStyles(theme, variant)};
 		}
 
 		&:after {
@@ -34,18 +42,17 @@ export const toggleInputStyles = (theme, size) => css`
 
 	@media (hover: hover) {
 		& input:hover:not([disabled]) ~ .toggle-input-slider {
-			border-color: ${theme.colors.secondary};
+			${hoverColorsStyles(theme, variant)};
 		}
 	}
 
 	& input:focus:not([disabled]) ~ .toggle-input-slider {
-		border-color: ${theme.colors.secondary};
-		box-shadow: 0 0 0 4px ${theme.colors.secondaryLight};
 		outline: none;
+		${focusColorsStyles(theme, variant)};
 	}
 
 	& input:active:not([disabled]) ~ .toggle-input-slider {
-		box-shadow: 0 0 0 2px ${theme.colors.secondaryLight};
+		${activeColorsStyles(theme, variant)};
 	}
 
 	& input:disabled {
@@ -69,8 +76,8 @@ export const toggleInputStyles = (theme, size) => css`
 		border-radius: 30px;
 		background: ${theme.colors.light};
 		pointer-events: none;
-		box-shadow: 0 0 0 0 ${theme.colors.secondaryLight};
 		transition: all 0.3s ease;
+		${defaultShadowStyles(theme, variant)};
 
 		${size === "default"
 			? css`
@@ -104,9 +111,9 @@ export const toggleInputStyles = (theme, size) => css`
 			left: 0;
 			top: 0;
 			border-radius: 50%;
-			background: ${theme.colors.secondary};
 			transition: all 0.3s ease;
 			transform: translate3d(0, 0, 0) translateX(0);
+			${defaultBackgroundStyles(theme, variant)};
 
 			${size === "default"
 				? css`

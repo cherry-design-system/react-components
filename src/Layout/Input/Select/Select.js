@@ -11,8 +11,9 @@ function Select({
 	error,
 	success,
 	label,
-	theme = localTheme,
 	fullWidth,
+	variant = "secondary",
+	theme = localTheme,
 	...props
 }) {
 	return (
@@ -34,6 +35,7 @@ function Select({
 					success,
 					error,
 					fullWidth,
+					variant,
 				)}
 			>
 				<select
@@ -46,6 +48,7 @@ function Select({
 						success,
 						error,
 						fullWidth,
+						variant,
 					)}
 					{...props}
 				>
