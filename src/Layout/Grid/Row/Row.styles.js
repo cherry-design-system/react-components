@@ -7,11 +7,41 @@ const row = css`
 	justify-content: space-between;
 `;
 
+const defaultGutter = (theme) => css`
+	margin-right: ${theme.spacing.marginRow.default};
+	margin-left: ${theme.spacing.marginRow.default};
+
+	& .col {
+		padding-right: ${theme.spacing.gutterCol.default};
+		padding-left: ${theme.spacing.gutterCol.default};
+	}
+`;
+
+const mediumGutter = (theme) => css`
+	margin-right: ${theme.spacing.marginRow.medium};
+	margin-left: ${theme.spacing.marginRow.medium};
+
+	& .col {
+		padding-right: ${theme.spacing.gutterCol.medium};
+		padding-left: ${theme.spacing.gutterCol.medium};
+	}
+`;
+
+const bigGutter = (theme) => css`
+	margin-right: ${theme.spacing.marginRow.big};
+	margin-left: ${theme.spacing.marginRow.big};
+
+	& .col {
+		padding-right: ${theme.spacing.gutterCol.big};
+		padding-left: ${theme.spacing.gutterCol.big};
+	}
+`;
+
 export const rowStyles = (
 	theme,
 	alignItems,
 	justifyContent,
-	gutterXs,
+	gutterXs = "default",
 	gutterSm,
 	gutterMd,
 	gutterLg,
@@ -80,248 +110,136 @@ export const rowStyles = (
 		justify-content: initial;
 	`}
 
-	${mq(Breakpoints.xs)} {
-		${gutterXs === "default" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.default};
-			margin-left: ${theme.spacing.marginRow.default};
+	${gutterXs === "default" &&
+	css`
+		${mq(Breakpoints.xs)} {
+			${defaultGutter(theme)};
+		}
+	`}
+	${gutterXs === "medium" &&
+	css`
+		${mq(Breakpoints.xs)} {
+			${mediumGutter(theme)};
+		}
+	`}
+	${gutterXs === "big" &&
+	css`
+		${mq(Breakpoints.xs)} {
+			${bigGutter(theme)};
+		}
+	`}
 
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.default};
-				padding-left: ${theme.spacing.gutterCol.default};
-			}
-		`}
+	${gutterSm === "default" &&
+	css`
+		${mq(Breakpoints.sm)} {
+			${defaultGutter(theme)};
+		}
+	`}
+	${gutterSm === "medium" &&
+	css`
+		${mq(Breakpoints.sm)} {
+			${mediumGutter(theme)};
+		}
+	`}
+	${gutterSm === "big" &&
+	css`
+		${mq(Breakpoints.sm)} {
+			${bigGutter(theme)};
+		}
+	`}
 
-		${gutterXs === "medium" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.medium};
-			margin-left: ${theme.spacing.marginRow.medium};
+	${gutterMd === "default" &&
+	css`
+		${mq(Breakpoints.md)} {
+			${defaultGutter(theme)};
+		}
+	`}
+	${gutterMd === "medium" &&
+	css`
+		${mq(Breakpoints.md)} {
+			${mediumGutter(theme)};
+		}
+	`}
+	${gutterMd === "big" &&
+	css`
+		${mq(Breakpoints.md)} {
+			${bigGutter(theme)};
+		}
+	`}
 
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.medium};
-				padding-left: ${theme.spacing.gutterCol.medium};
-			}
-		`}
+	${gutterLg === "default" &&
+	css`
+		${mq(Breakpoints.lg)} {
+			${defaultGutter(theme)};
+		}
+	`}
+	${gutterLg === "medium" &&
+	css`
+		${mq(Breakpoints.lg)} {
+			${mediumGutter(theme)};
+		}
+	`}
+	${gutterLg === "big" &&
+	css`
+		${mq(Breakpoints.lg)} {
+			${bigGutter(theme)};
+		}
+	`}
 
-		${gutterXs === "big" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.big};
-			margin-left: ${theme.spacing.marginRow.big};
+	${gutterXl === "default" &&
+	css`
+		${mq(Breakpoints.xl)} {
+			${defaultGutter(theme)};
+		}
+	`}
+	${gutterXl === "medium" &&
+	css`
+		${mq(Breakpoints.xl)} {
+			${mediumGutter(theme)};
+		}
+	`}
+	${gutterXl === "big" &&
+	css`
+		${mq(Breakpoints.xl)} {
+			${bigGutter(theme)};
+		}
+	`}
 
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.big};
-				padding-left: ${theme.spacing.gutterCol.big};
-			}
-		`}
-	}
+	${gutterXxl === "default" &&
+	css`
+		${mq(Breakpoints.xxl)} {
+			${defaultGutter(theme)};
+		}
+	`}
+	${gutterXxl === "medium" &&
+	css`
+		${mq(Breakpoints.xxl)} {
+			${mediumGutter(theme)};
+		}
+	`}
+	${gutterXxl === "big" &&
+	css`
+		${mq(Breakpoints.xxl)} {
+			${bigGutter(theme)};
+		}
+	`}
 
-	${mq(Breakpoints.sm)} {
-		${gutterSm === "default" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.default};
-			margin-left: ${theme.spacing.marginRow.default};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.default};
-				padding-left: ${theme.spacing.gutterCol.default};
-			}
-		`}
-
-		${gutterSm === "medium" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.medium};
-			margin-left: ${theme.spacing.marginRow.medium};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.medium};
-				padding-left: ${theme.spacing.gutterCol.medium};
-			}
-		`}
-
-		${gutterSm === "big" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.big};
-			margin-left: ${theme.spacing.marginRow.big};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.big};
-				padding-left: ${theme.spacing.gutterCol.big};
-			}
-		`}
-	}
-
-	${mq(Breakpoints.md)} {
-		${gutterMd === "default" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.default};
-			margin-left: ${theme.spacing.marginRow.default};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.default};
-				padding-left: ${theme.spacing.gutterCol.default};
-			}
-		`}
-
-		${gutterMd === "medium" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.medium};
-			margin-left: ${theme.spacing.marginRow.medium};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.medium};
-				padding-left: ${theme.spacing.gutterCol.medium};
-			}
-		`}
-
-		${gutterMd === "big" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.big};
-			margin-left: ${theme.spacing.marginRow.big};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.big};
-				padding-left: ${theme.spacing.gutterCol.big};
-			}
-		`}
-	}
-
-	${mq(Breakpoints.lg)} {
-		${gutterLg === "default" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.default};
-			margin-left: ${theme.spacing.marginRow.default};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.default};
-				padding-left: ${theme.spacing.gutterCol.default};
-			}
-		`}
-
-		${gutterLg === "medium" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.medium};
-			margin-left: ${theme.spacing.marginRow.medium};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.medium};
-				padding-left: ${theme.spacing.gutterCol.medium};
-			}
-		`}
-
-		${gutterLg === "big" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.big};
-			margin-left: ${theme.spacing.marginRow.big};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.big};
-				padding-left: ${theme.spacing.gutterCol.big};
-			}
-		`}
-	}
-
-	${mq(Breakpoints.xl)} {
-		${gutterXl === "default" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.default};
-			margin-left: ${theme.spacing.marginRow.default};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.default};
-				padding-left: ${theme.spacing.gutterCol.default};
-			}
-		`}
-
-		${gutterXl === "medium" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.medium};
-			margin-left: ${theme.spacing.marginRow.medium};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.medium};
-				padding-left: ${theme.spacing.gutterCol.medium};
-			}
-		`}
-
-		${gutterXl === "big" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.big};
-			margin-left: ${theme.spacing.marginRow.big};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.big};
-				padding-left: ${theme.spacing.gutterCol.big};
-			}
-		`}
-	}
-
-	${mq(Breakpoints.xxl)} {
-		${gutterXxl === "default" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.default};
-			margin-left: ${theme.spacing.marginRow.default};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.default};
-				padding-left: ${theme.spacing.gutterCol.default};
-			}
-		`}
-
-		${gutterXxl === "medium" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.medium};
-			margin-left: ${theme.spacing.marginRow.medium};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.medium};
-				padding-left: ${theme.spacing.gutterCol.medium};
-			}
-		`}
-
-		${gutterXxl === "big" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.big};
-			margin-left: ${theme.spacing.marginRow.big};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.big};
-				padding-left: ${theme.spacing.gutterCol.big};
-			}
-		`}
-	}
-
-	${mq(Breakpoints.xxxl)} {
-		${gutterXxxl === "default" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.default};
-			margin-left: ${theme.spacing.marginRow.default};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.default};
-				padding-left: ${theme.spacing.gutterCol.default};
-			}
-		`}
-
-		${gutterXxxl === "medium" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.medium};
-			margin-left: ${theme.spacing.marginRow.medium};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.medium};
-				padding-left: ${theme.spacing.gutterCol.medium};
-			}
-		`}
-
-		${gutterXxxl === "big" &&
-		css`
-			margin-right: ${theme.spacing.marginRow.big};
-			margin-left: ${theme.spacing.marginRow.big};
-
-			& .col {
-				padding-right: ${theme.spacing.gutterCol.big};
-				padding-left: ${theme.spacing.gutterCol.big};
-			}
-		`}
-	}
+	${gutterXxxl === "default" &&
+	css`
+		${mq(Breakpoints.xxxl)} {
+			${defaultGutter(theme)};
+		}
+	`}
+	${gutterXxxl === "medium" &&
+	css`
+		${mq(Breakpoints.xxxl)} {
+			${mediumGutter(theme)};
+		}
+	`}
+	${gutterXxxl === "big" &&
+	css`
+		${mq(Breakpoints.xxxl)} {
+			${bigGutter(theme)};
+		}
+	`}
 `;
