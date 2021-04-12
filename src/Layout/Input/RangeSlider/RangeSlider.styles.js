@@ -14,6 +14,7 @@ export const rangeSliderStyles = (theme, size, variant, disabled) => css`
 	font-size: 0;
 	box-shadow: none;
 	border: none;
+	background: transparent;
 
 	&::-webkit-slider-runnable-track {
 		width: 100%;
