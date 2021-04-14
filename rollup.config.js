@@ -16,6 +16,7 @@ export default [
 				globals: {
 					react: "React",
 					"react-dom": "ReactDOM",
+					"@emotion/react": "css",
 				},
 			},
 			{
@@ -43,6 +44,6 @@ export default [
 			terser(),
 		],
 
-		external: ["react", "react-dom"],
+		external: ["react", "react-dom", "@emotion/react"],
 	},
 ];
