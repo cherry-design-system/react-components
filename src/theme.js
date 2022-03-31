@@ -151,8 +151,8 @@ const localTheme = {
 		},
 		button: {
 			size: {
-				mobile: "12px",
-				desktop: "14px",
+				mobile: "16px",
+				desktop: "16px",
 			},
 			lineheight: {
 				mobile: "1",
@@ -161,7 +161,7 @@ const localTheme = {
 		},
 		buttonBig: {
 			size: {
-				mobile: "16px",
+				mobile: "18px",
 				desktop: "18px",
 			},
 			lineheight: {
@@ -181,8 +181,8 @@ const localTheme = {
 		},
 		input: {
 			size: {
-				mobile: "12px",
-				desktop: "14px",
+				mobile: "16px",
+				desktop: "16px",
 			},
 			lineheight: {
 				mobile: "1",
@@ -191,7 +191,7 @@ const localTheme = {
 		},
 		inputBig: {
 			size: {
-				mobile: "16px",
+				mobile: "18px",
 				desktop: "18px",
 			},
 			lineheight: {

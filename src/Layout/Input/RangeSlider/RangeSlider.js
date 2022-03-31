@@ -1,6 +1,5 @@
 import React from "react";
 import { localTheme } from "../../../theme";
-import { Label } from "../../Label/Label";
 import { inputStyles } from "../Input.styles";
 
 function RangeSlider({
