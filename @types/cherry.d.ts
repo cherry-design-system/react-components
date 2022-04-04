@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Theme } from "./theme";
 
 declare class Button extends React.Component<ButtonProps, any> {}
 
@@ -267,4 +268,5 @@ export {
 	MinHeight,
 	Space,
 	TableOverflow,
+	Theme,
 };
