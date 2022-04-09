@@ -145,6 +145,10 @@ export interface FontSizes<TString = string> {
 		size: ResponsiveSize<TString>;
 		lineheight: ResponsiveSize<TString>;
 	};
+	code: {
+		size: ResponsiveSize<TString>;
+		lineheight: ResponsiveSize<TString>;
+	};
 }
 
 export interface Theme extends EmotionTheme {

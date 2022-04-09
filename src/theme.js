@@ -249,6 +249,16 @@ const localTheme = {
 				desktop: "1.50",
 			},
 		},
+		code: {
+			size: {
+				mobile: "14px",
+				desktop: "18px",
+			},
+			lineheight: {
+				mobile: "1.50",
+				desktop: "1.50",
+			},
+		},
 	},
 };
 

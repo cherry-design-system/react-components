@@ -65,7 +65,17 @@ const globalStyles = (
 			code,
 			kbd,
 			samp {
-				font-family: monospace, monospace;
+				font-family: ${theme.fonts.mono};
+			}
+
+			code {
+				font-size: ${theme.sizes.code.size.mobile};
+				line-height: ${theme.sizes.code.lineheight.mobile};
+
+				${mq(Breakpoints.lg)} {
+					font-size: ${theme.sizes.code.size.desktop};
+					line-height: ${theme.sizes.code.lineheight.desktop};
+				}
 			}
 
 			pre {
