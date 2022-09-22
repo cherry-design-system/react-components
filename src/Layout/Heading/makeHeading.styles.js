@@ -6,20 +6,6 @@ const makeHeadingStyles = (theme, size, h) => css`
 	font-weight: 800;
 	margin: 0;
 	position: relative;
-	z-index: -1;
-
-	&:before {
-		content: "";
-		display: block;
-		height: calc(${theme.spacing.paddingTopBody.mobile} + 10px);
-		margin: calc(-${theme.spacing.paddingTopBody.mobile} - 10px) 0 0;
-		pointer-events: none;
-
-		${mq(Breakpoints.lg)} {
-			height: calc(${theme.spacing.paddingTopBody.desktop} + 10px);
-			margin: calc(-${theme.spacing.paddingTopBody.desktop} - 10px) 0 0;
-		}
-	}
 
 	${h === 1 &&
 	css`
