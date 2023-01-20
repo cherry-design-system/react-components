@@ -8,3 +8,8 @@ export { Label } from "./Label";
 export { MinHeight } from "./MinHeight";
 export { Space } from "./Space";
 export { TableOverflow } from "./TableOverflow";
+export {
+	ToastNotificationsContext,
+	ToastNotificationsProvider,
+	ToastNotifications,
+} from "./ToastNotifications";
