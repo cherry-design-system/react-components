@@ -41,6 +41,23 @@ declare class Space extends React.Component<SpaceProps, any> {}
 
 declare class TableOverflow extends React.Component<TableOverflowProps, any> {}
 
+declare class ToastNotificationsProvider extends React.Component<
+	any,
+	any
+> {}
+
+declare class ToastNotifications extends React.Component<
+	any,
+	any
+> {}
+
+declare class ToastNotificationsContext extends React.Component<
+	ToastNotificationsContextProps,
+	any
+> {}
+
+declare class TableOverflow extends React.Component<TableOverflowProps, any> {}
+
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	children?: React.ReactNode;
 	variant?: "primary" | "secondary" | "tertiary";
@@ -247,6 +264,17 @@ interface TableOverflowProps {
 	children?: React.ReactNode;
 }
 
+interface ToastNotificationsContextProps {
+	notifications: any;
+	addNotification: (
+		text: string,
+		object: {
+			autoHide?: number;
+			color?: "info" | "error" | "success" | "warning";
+		},
+	) => void;
+}
+
 export {
 	Button,
 	Container,
@@ -268,5 +296,8 @@ export {
 	MinHeight,
 	Space,
 	TableOverflow,
+	ToastNotificationsContext,
+	ToastNotificationsProvider,
+	ToastNotifications,
 	Theme,
 };

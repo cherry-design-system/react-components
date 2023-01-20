@@ -1,6 +1,6 @@
 {
 	"name": "cherry-components",
-	"version": "0.0.2-18",
+	"version": "0.0.2-19",
 	"description": "Cherry React Components",
 	"main": "dist/cherry.js",
 	"module": "dist/cherry.module.js",
@@ -20,7 +20,7 @@
 	],
 	"scripts": {
 		"build": "rollup -c rollup.config.js --bundleConfigAsCjs",
-		"watch": "rollup -c rollup.config.js -w",
+		"watch": "rollup -c rollup.config.js --bundleConfigAsCjs -w",
 		"lint": "eslint src/**/*.js",
 		"lint:fix": "eslint src/**/*.js --fix",
 		"format": "prettier --write \"./src/**/*.{js,json,ts,tsx}\" \"!.node_modules/**\""

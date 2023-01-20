@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { rgba } from "polished";
 import { resetButtonStyles, shadowStyles } from "../../helperStyles";
 
 export const notificationsStyles = (theme) => css`
@@ -51,22 +50,13 @@ export const notificationsStyles = (theme) => css`
 				margin: auto 0 auto 10px;
 				padding: 14px 12px;
 				display: inline-flex;
-				background: ${rgba(theme.colors.light, 0)};
+				background: rgba(255, 255, 255, 0);
 				transition: all 0.3s ease;
 				max-width: 40px;
 				width: 40px;
 				overflow: hidden;
 				height: 100%;
-
-				${theme.isDark
-					? css`
-							border-left: solid 1px
-								${rgba(theme.colors.dark, 0.3)};
-					  `
-					: css`
-							border-left: solid 1px
-								${rgba(theme.colors.light, 0.3)};
-					  `}
+				border-left: solid 1px rgba(255, 255, 255, 0.3);
 
 				& svg {
 					width: 12px;
@@ -80,16 +70,7 @@ export const notificationsStyles = (theme) => css`
 
 				@media (hover: hover) {
 					&:hover {
-						${theme.isDark
-							? css`
-									background: ${rgba(theme.colors.dark, 0.2)};
-							  `
-							: css`
-									background: ${rgba(
-										theme.colors.light,
-										0.2,
-									)};
-							  `}
+						background: rgba(255, 255, 255, 0.2);
 					}
 				}
 			}
