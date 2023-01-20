@@ -41,7 +41,6 @@ declare class Space extends React.Component<SpaceProps, any> {}
 
 declare class TableOverflow extends React.Component<TableOverflowProps, any> {}
 
-declare class TableOverflow extends React.Component<TableOverflowProps, any> {}
 
 declare class ToastNotificationsProvider extends React.Component<
 	any,
@@ -53,10 +52,7 @@ declare class ToastNotifications extends React.Component<
 	any
 > {}
 
-declare class ToastNotificationsContext extends React.Component<
-	ToastNotificationsContextProps,
-	any
-> {}
+const ToastNotificationsContext = React.createContext<ToastNotificationsContextProps | null>(null);
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	children?: React.ReactNode;
@@ -264,11 +260,18 @@ interface TableOverflowProps {
 	children?: React.ReactNode;
 }
 
+interface ToastNotificationProps {
+	text: string;
+	status: "hidden" | "visible";
+	color: string;
+	autoHide: number;
+}
+
 interface ToastNotificationsContextProps {
-	notifications: any;
+	notifications?: ToastNotificationProps[];
 	addNotification: (
 		text: string,
-		object: {
+		config?: {
 			autoHide?: number;
 			color?: "info" | "error" | "success" | "warning";
 		},
