@@ -41,6 +41,8 @@ declare class Space extends React.Component<SpaceProps, any> {}
 
 declare class TableOverflow extends React.Component<TableOverflowProps, any> {}
 
+declare class TableOverflow extends React.Component<TableOverflowProps, any> {}
+
 declare class ToastNotificationsProvider extends React.Component<
 	any,
 	any
@@ -55,8 +57,6 @@ declare class ToastNotificationsContext extends React.Component<
 	ToastNotificationsContextProps,
 	any
 > {}
-
-declare class TableOverflow extends React.Component<TableOverflowProps, any> {}
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	children?: React.ReactNode;
