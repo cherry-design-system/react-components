@@ -1,15 +1,36 @@
 import { css } from "@emotion/react";
 import { resetButtonStyles, shadowStyles } from "../../helperStyles";
 
-export const notificationsStyles = (theme) => css`
+export const notificationsStyles = (theme, align, bottom) => css`
 	position: fixed;
-	top: 12px;
-	left: 50%;
-	transform: translateX(-50%);
 	z-index: 99999;
 	margin: 0;
 	padding: 0;
 	list-style: none;
+
+	${align === "center" &&
+	css`
+		left: 50%;
+		transform: translateX(-50%);
+	`}
+
+	${align === "right" &&
+	css`
+		right: 20px;
+	`}
+
+${align === "left" &&
+	css`
+		left: 20px;
+	`}
+
+${bottom
+		? css`
+				bottom: 12px;
+		  `
+		: css`
+				top: 12px;
+		  `}
 
 	& li {
 		justify-content: center;
