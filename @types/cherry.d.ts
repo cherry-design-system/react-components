@@ -49,7 +49,7 @@ declare class ToastNotifications extends React.Component<
 > {}
 
 const ToastNotificationsContext =
-	React.createContext<ToastNotificationsContextProps | null>(null);
+	React.createContext<ToastNotificationsContextProps>();
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	children?: React.ReactNode;
@@ -267,7 +267,7 @@ interface ToastNotificationProps {
 interface ToastNotificationsContextProps {
 	notifications?: ToastNotificationProps[];
 	addNotification: (
-		text: string,
+		text: React.ReactNode | string,
 		config?: {
 			autoHide?: number;
 			color?: "info" | "error" | "success" | "warning";
