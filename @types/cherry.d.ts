@@ -48,6 +48,8 @@ declare class ToastNotifications extends React.Component<
 	any
 > {}
 
+declare class Accordion extends React.Component<AccordionProps, any> {}
+
 const ToastNotificationsContext =
 	React.createContext<ToastNotificationsContextProps>();
 
@@ -281,7 +283,14 @@ interface ToastNotificationsProps {
 	theme?: object;
 }
 
+interface AccordionProps {
+	title: React.ReactNode | string;
+	children: React.ReactNode;
+	theme?: object;
+}
+
 export {
+	Accordion,
 	Button,
 	Container,
 	FontStyle,

@@ -1,4 +1,5 @@
 export {
+	Accordion,
 	Button,
 	Container,
 	FontStyle,

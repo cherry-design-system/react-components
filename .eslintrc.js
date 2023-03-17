@@ -1,5 +1,5 @@
 const eslintcfg = {
-	parser: "babel-eslint",
+	parser: "@babel/eslint-parser",
 	plugins: ["prettier", "react", "react-hooks", "@emotion"],
 	rules: {
 		"global-require": 0,
